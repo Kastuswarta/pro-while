@@ -13,7 +13,7 @@ namespace Lessons
                 string str;
                 long a, b, c;
                 Console.WriteLine("                                             ");
-                Console.WriteLine("Проверка чётности вводимого числа");
+                Console.WriteLine(" Warta   ewanstyj  licbaw  ");
                 Console.WriteLine("                                        ");
                 Console.WriteLine("введи проверяемое целочисленное значение");
                 Console.WriteLine("                                    ");
