@@ -1,0 +1,55 @@
+using System;
+
+namespace Lessons
+{
+    class Parity
+    {
+        static void Main(string[] args)
+        {
+            Parity Parity = new Parity();
+            bool endApp = false;
+            while (!endApp)
+            {
+                string str;
+                long a, b, c;
+                Console.WriteLine("                                             ");
+                Console.WriteLine("Проверка чётности вводимого числа");
+                Console.WriteLine("                                        ");
+                Console.WriteLine("введи проверяемое целочисленное значение");
+                Console.WriteLine("                                    ");
+                str = Console.ReadLine();
+                long.TryParse(str, out a);
+                if (a == 0)
+                {
+                    Console.WriteLine("                                    ");
+                    Console.WriteLine("Проверяемый символ является буквенным выражением");
+                    Console.WriteLine("         числом ноль или  дробным числом        ");
+                    Console.WriteLine("                                    ");
+                    Console.WriteLine("Необходимо ввести целочисленное значение");
+                }
+                else
+                {
+                    b = a / 2;
+                    c = b + b;
+                    if (a == c)
+                    {
+                        Console.WriteLine("                                                         ");
+                        Console.WriteLine("проверяемое число       "  + a +  "        является  ЧЁТНЫМ");
+                        Console.WriteLine("                                   ");
+                    }
+                    else
+                    {
+                        Console.WriteLine("                                                           ");
+                        Console.WriteLine("проверяемое число       "  + a +  "        является НЕЧЁТНЫМ");
+                        Console.WriteLine("                                   ");
+                    }
+                    Console.Write("Нажми (n) и ввод, чтобы закрыть приложение или ");
+                    Console.Write("нажми любую клавишу, чтобы продолжить");
+                    if (Console.ReadLine() == "n") endApp = true;
+
+                    Console.WriteLine("\n");
+                }
+            }    return;
+        }
+    }
+}
